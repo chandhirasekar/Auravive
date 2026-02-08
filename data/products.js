@@ -13,9 +13,9 @@ export const products = [
     rating: 4.8,
     reviews: 127,
     images: [
-      "/images/products/abc-malt-1.jpg",
-      "/images/products/abc-malt-2.jpg",
-      "/images/products/abc-malt-3.jpg"
+      "/abc/abc.png",
+      "/abc/abcdetail.jpeg",
+      "/abc/abcsticker.jpeg"
     ],
     description: "ABC Malt is a premium nutritional supplement that combines the goodness of nature's finest ingredients. A perfect blend designed to provide your body with essential nutrients for overall wellness.",
     benefits: [
@@ -64,8 +64,8 @@ export const products = [
     reviews: 203,
     images: [
       "/images/products/moringa-1.jpg",
-      "/images/products/moringa-2.jpg",
-      "/images/products/moringa-3.jpg"
+      "/morning/moringmixstickerdetail.jpeg",
+      "/morning/moringmixdetail.jpeg"
     ],
     description: "Premium Moringa Powder is packed with antioxidants, vitamins, and minerals. Known as the 'miracle tree', moringa leaves offer exceptional nutritional benefits for holistic wellness.",
     benefits: [

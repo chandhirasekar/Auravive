@@ -91,34 +91,34 @@ export default function Home() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {/* ABC Malt */}
-          <div className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+          <Link href={"/products/abc-malt"} className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
             <div className="w-full h-48 bg-gradient-to-br from-purple-100 to-purple-50 rounded-lg mb-4 flex items-center justify-center">
               <div className="text-purple-400 text-6xl">🍎</div>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">ABC Malt</h3>
             <p className="text-gray-600 mb-4">Natural daily boost for body, mind, and spirit</p>
             <span className="text-2xl font-bold text-green-700">₹449</span>
-          </div>
+          </Link>
 
           {/* Moringa Powder */}
-          <div className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+          <Link href={"/products/moringa-powder"} className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
             <div className="w-full h-48 bg-gradient-to-br from-green-100 to-green-50 rounded-lg mb-4 flex items-center justify-center">
               <div className="text-green-400 text-6xl">🌿</div>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">Moringa Powder</h3>
             <p className="text-gray-600 mb-4">Your daily power in a scoop</p>
             <span className="text-2xl font-bold text-green-700">₹349</span>
-          </div>
+          </Link>
 
           {/* Curry Leaves Mix */}
-          <div className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+          <Link href={"/products/curry-leaves-mix"} className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
             <div className="w-full h-48 bg-gradient-to-br from-green-100 to-green-50 rounded-lg mb-4 flex items-center justify-center">
               <div className="text-green-500 text-6xl">🍃</div>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">Curry Leaves Mix</h3>
             <p className="text-gray-600 mb-4">Authentic South Indian blend</p>
             <span className="text-2xl font-bold text-green-700">₹299</span>
-          </div>
+          </Link>
         </div>
 
         <div className="text-center">
