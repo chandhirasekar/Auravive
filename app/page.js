@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer';
 import Link from 'next/link';
 
 export default function Home() {
@@ -17,7 +18,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         
         {/* Content */}
-        <div className="relative container mx-auto px-4 py-20 text-center z-10">
+        <div data-aos="zoom-out" className="relative container mx-auto px-4 py-20 text-center z-10">
           <div className="mb-8">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 drop-shadow-lg">
               Auravive
@@ -45,7 +46,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="bg-white py-16">
+      <section data-aos="zoom-in" className="bg-white py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             Why Choose Auravive?
@@ -89,9 +90,9 @@ export default function Home() {
         </h2>
         <p className="text-center text-gray-600 mb-12">From Leaf to Life</p>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div  className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {/* ABC Malt */}
-          <Link href={"/products/abc-malt"} className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+          <Link data-aos="flip-up" href={"/products/abc-malt"} className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
             <div className="w-full h-48 bg-gradient-to-br from-purple-100 to-purple-50 rounded-lg mb-4 flex items-center justify-center">
               <div className="text-purple-400 text-6xl">🍎</div>
             </div>
@@ -101,7 +102,7 @@ export default function Home() {
           </Link>
 
           {/* Moringa Powder */}
-          <Link href={"/products/moringa-powder"} className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+          <Link data-aos="fade-up" href={"/products/moringa-powder"} className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
             <div className="w-full h-48 bg-gradient-to-br from-green-100 to-green-50 rounded-lg mb-4 flex items-center justify-center">
               <div className="text-green-400 text-6xl">🌿</div>
             </div>
@@ -111,7 +112,7 @@ export default function Home() {
           </Link>
 
           {/* Curry Leaves Mix */}
-          <Link href={"/products/curry-leaves-mix"} className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+          <Link data-aos="flip-down" href={"/products/curry-leaves-mix"} className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
             <div className="w-full h-48 bg-gradient-to-br from-green-100 to-green-50 rounded-lg mb-4 flex items-center justify-center">
               <div className="text-green-500 text-6xl">🍃</div>
             </div>
@@ -132,7 +133,7 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-green-700 to-green-900 text-white py-16">
-        <div className="container mx-auto px-4 text-center">
+        <div data-aos="zoom-out" className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Choose Auravive — Because Wellness Starts Here
           </h2>
@@ -148,23 +149,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-gray-400">
-            © 2026 Auravive. All rights reserved.
-          </p>
-          <div className="mt-4">
-            <a 
-              href="https://www.instagram.com/auravive_official/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-green-400 hover:text-green-300 transition-colors"
-            >
-              @auravive_official
-            </a>
-          </div>
-        </div>
-      </footer>
+      <Footer/>
     </div>
   );
 }

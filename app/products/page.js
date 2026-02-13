@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { products, categories } from '@/data/products';
+import Footer from '@/components/Footer';
 
 export default function ProductsPage() {
   const [selectedCategory, setSelectedCategory] = useState('All Products');
@@ -42,7 +43,7 @@ export default function ProductsPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-green-900/80 to-green-700/80"></div>
         
         {/* Content */}
-        <div className="relative container mx-auto px-4 z-10">
+        <div data-aos="zoom-out" className="relative container mx-auto px-4 z-10">
           <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white drop-shadow-lg">
             Our Products
           </h1>
@@ -91,7 +92,7 @@ export default function ProductsPage() {
         {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {sortedProducts.map((product) => (
-            <Link href={`/products/${product.slug}`} key={product.id}>
+            <Link data-aos="zoom-in" href={`/products/${product.slug}`} key={product.id}>
               <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group cursor-pointer h-full">
                 {/* Product Image */}
                 <div className="relative h-72 bg-white overflow-hidden flex items-center justify-center p-8">
@@ -219,25 +220,26 @@ export default function ProductsPage() {
       <div className="bg-green-50 py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
+            <div data-aos="zoom-out">
               <div className="text-green-700 text-3xl font-bold mb-2">100%</div>
               <div className="text-gray-700">Natural & Organic</div>
             </div>
-            <div>
+            <div data-aos="zoom-out">
               <div className="text-green-700 text-3xl font-bold mb-2">Non-GMO</div>
               <div className="text-gray-700">Certified Products</div>
             </div>
-            <div>
+            <div data-aos="zoom-out">
               <div className="text-green-700 text-3xl font-bold mb-2">Lab</div>
               <div className="text-gray-700">Tested Quality</div>
             </div>
-            <div>
+            <div data-aos="zoom-out">
               <div className="text-green-700 text-3xl font-bold mb-2">500+</div>
               <div className="text-gray-700">Happy Customers</div>
             </div>
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

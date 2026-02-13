@@ -3,6 +3,7 @@ import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
 import Navbar from "@/components/Navbar";
 import CartSidebar from "@/components/CartSidebar";
+import AOSWrapper from "@/components/AOSWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,9 +36,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <CartProvider>
+          <AOSWrapper>
           <Navbar />
           <main>{children}</main>
           <CartSidebar />
+          </AOSWrapper>
         </CartProvider>
       </body>
     </html>

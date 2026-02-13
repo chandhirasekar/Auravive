@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from 'next/link';
+import Footer from "./Footer";
 
 
 export default function ProductDetailClient({product,relatedProducts}) {
@@ -32,7 +33,7 @@ export default function ProductDetailClient({product,relatedProducts}) {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Image Gallery */}
-          <div>
+          <div data-aos="fade-right">
             {/* Main Image */}
             <div className="bg-white rounded-2xl p-8 mb-4 shadow-lg">
               <div className="aspect-square flex items-center justify-center">
@@ -79,7 +80,7 @@ export default function ProductDetailClient({product,relatedProducts}) {
           </div>
 
           {/* Product Info */}
-          <div>
+          <div data-aos="fade-left">
             {/* Category Badge */}
             <div className="inline-block bg-green-100 text-green-700 px-4 py-1 rounded-full text-sm font-medium mb-4">
               {product.category}
@@ -228,7 +229,7 @@ export default function ProductDetailClient({product,relatedProducts}) {
         </div>
 
         {/* Tabs Section */}
-        <div className="mt-16">
+        <div data-aos="zoom-out" className="mt-16">
           {/* Tab Headers */}
           <div className="border-b border-gray-200">
             <div className="flex gap-8">
@@ -249,7 +250,7 @@ export default function ProductDetailClient({product,relatedProducts}) {
           </div>
 
           {/* Tab Content */}
-          <div className="py-8">
+          <div  className="py-8">
             {activeTab === 'description' && (
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Product Description</h2>
@@ -386,8 +387,8 @@ export default function ProductDetailClient({product,relatedProducts}) {
       </div>
 
       {/* Bottom CTA */}
-      <div className="bg-gradient-to-r from-green-700 to-green-900 text-white py-12">
-        <div className="container mx-auto px-4 text-center">
+      <div  className="bg-gradient-to-r from-green-700 to-green-900 text-white py-12">
+        <div  data-aos="zoom-out" className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Have Questions?</h2>
           <p className="text-xl text-green-100 mb-6">
             Our team is here to help you choose the right products for your wellness journey
@@ -397,6 +398,7 @@ export default function ProductDetailClient({product,relatedProducts}) {
           </button>
         </div>
       </div>
+      <Footer/>
     </div>
     )
 }
